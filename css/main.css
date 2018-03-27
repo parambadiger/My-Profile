@@ -14,6 +14,7 @@ aside{
     text-align: center;
     color: #fff;
     padding: 2rem;
+    position: sticky;
 }
 aside img{
     width: 150px;
@@ -36,7 +37,7 @@ aside a:hover{
 
 
 main{
-    padding: 2rem;
+    padding: 1rem;
 }
 main #icons{
     display: flex;
@@ -47,70 +48,35 @@ main #icons img{
     width: 75px;
     height: 50px;
 }
+main a{
+    text-decoration: none;
+}
 
-
-.about{
+.about, .contact, .skill, .experience, .academics{
     display: grid;
     grid-template-columns: 1fr 1fr;   
     grid-row-gap: 20px;
 }
-.about div:nth-child(odd){
+.about div:nth-child(odd), .skill div:nth-child(odd), .academics div:nth-child(odd), .contact div:nth-child(odd), .experience div:nth-child(odd){
     border-right: 1px solid #000;
-    text-align: right;
+    text-align: justify;
+    direction:rtl;
     padding-right: 2rem;
 }
-.about div:nth-child(even){
+.about div:nth-child(even), .skill div:nth-child(even), .academics div:nth-child(odd), .contact div:nth-child(even), .experience div:nth-child(even){
     border-left: 1px solid #000;
     padding-left: 2rem;
-    text-align: left;
-}
-#personal table{
-    padding-left: 2rem;
+    text-align: justify;
 }
 #about td, th{
     padding-bottom: 10px;
 }
 
-
-.contact{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: 20px;
-}
-.contact div:nth-child(odd){
-    border-right: 1px solid #000;
-    text-align: right;
-    padding-right: 2rem;
-}
-.contact div:nth-child(even){
-    border-left: 1px solid #000;
-    text-align: left;
-    padding-left: 2rem;
-}
-
-
-.skill{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: 20px;
-}
-.skill div:nth-child(odd){
-    border-right: 1px solid #000;
-    text-align: right;
-    padding-right: 2rem;
-}
-.skill div:nth-child(even){
-    border-left: 1px solid #000;
-    text-align: left;
-    padding-left: 2rem;
-}
-
-
-#about, #contact, #academics, #skill{
+#about, #contact, #academics, #skill, #experience{
     background-color: #efefef;
-    padding: 2rem;
+    padding: 1rem;
     display: none;
 }
-#about.active, #contact.active, #academics.active, #skill.active{
+#about.active, #contact.active, #academics.active, #skill.active, #experience.active{
     display: inherit;
 }

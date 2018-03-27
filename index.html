@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>About Me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
 </head>
@@ -15,11 +16,11 @@
                 <img src="img/dp.jpg">
                 <figcaption><h3>PARAMANAND</h3></figcaption>
             </figure>
-            <a href="#about">About Me</a>
-            <a href="#skill">Skills</a>
-            <a href="#academics">Academics</a>
-            <a href="">Experience</a>
-            <a href="#contact">Contact Me</a>
+            <a data-value="#about" onclick="handleNavigation(event)">About Me</a>
+            <a data-value="#skill" onclick="handleNavigation(event)">Skills</a>
+            <a data-value="#academics" onclick="handleNavigation(event)">Academics</a>
+            <a data-value="#experience" onclick="handleNavigation(event)">Experience</a>
+            <a data-value="#contact" onclick="handleNavigation(event)">Contact Me</a>
         </aside>
         <main>
             <div id="about" class="active">
@@ -28,9 +29,9 @@
                     <div id="summary">
                         <h3>SUMMARY</h3><hr>
                         <table>
-                            <tr><td>Understanding of industry trends and content management systems.</td></tr>
-                            <tr><td>Ability to improvise, grasp new skills and solve problems.</td></tr>
-                            <tr><td>Capability to work and flourish in fast-paced environment.</td></tr>
+                            <tr><td>Understanding of industry trends and content management systems</td></tr>
+                            <tr><td>Ability to improvise, grasp new skills and solve problems</td></tr>
+                            <tr><td>Capability to work and flourish in fast-paced environment</td></tr>
                         </table>
                     </div>
                     <div></div>
@@ -47,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div id="contact" class="active">
+            <div id="contact">
                 <center><h1>CONTACT ME</h1></center>
                 <div class="contact">
                     <div id="place">
@@ -78,7 +79,7 @@
                     </div>
                 </div>
             </div>
-            <div id="skill" class="active">
+            <div id="skill">
                 <center><h1>TECHNICAL SKILLS</h1><center>
                 <div class="skill">
                     <div>
@@ -106,14 +107,14 @@
                 </div>
             </div>
 
-            <div id="academics" class="active">
+            <div id="academics">
                 <center><h1>ACADEMICS</h1><center>
                 <div class="skill">
                     <div>
                         <h3>GRADUATION</h3><hr>
                         <p>B.Sc(Computer Science)</p>
                         <p>Karnataka Science College, Dharwad</p>
-                        <p>-2017</p>
+                        <p>[ 2014 - 2017 ]</p>
                     </div>
 
                     <div id="icons"><img src="img/college.svg"></div>
@@ -122,14 +123,29 @@
                     <div>
                         <h3>PUC</h3><hr>
                         <p>S G T Pre University College, Katkol</p>
-                        <p>-2014</p>
+                        <p>[ 2012 - 2014 ]</p>
                     </div>
                     <div>
                         <h3>SSLC</h3><hr>
                         <p>V D S Government School, K Chandargi</p>
-                        <p>-2012</p>
+                        <p>[ 2012 ]</p>
                     </div>
                     <div id="icons"><img src="img/college.svg"></div>
+                </div>
+            </div>
+            <div id="experience">
+                <center><h1>OPEN SOURCE PROJECTS [ AUG-2017 TO MAR-2018 ]</h1></center>
+                <div class="experience">
+                    <div>
+                        <h3>ONLINE RESUME SERVICE</h3><hr>
+                        <b>Wbsite</b>
+                        <p><a href="http://onlineresumeservice.somee.com/">www.onlineresumeservice.somee.com</a></p>
+                        <b>Github</b>
+                        <p><a href="https://github.com/parambadiger/Army-Welfare-Department">https://github.com/parambadiger/Army-Welfare-Department</a></p>
+                        <b>Project Description</b>
+                        <p>This project aimed at developing a web application for the Army Welfare Department. This web application that can be accessed throughout the Army Welfare Department with proper login provided. This system used for post the jobs for x-army persons and maintaining the details of the army persons</p>
+                    </div>
+                    <div></div>
                 </div>
             </div>
         </main>
