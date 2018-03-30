@@ -11,7 +11,7 @@ aside{
     background-color: #006666;
     text-align: center;
     color: #fff;
-    padding: 1rem;
+    padding: 1.5rem 3rem;
     box-sizing: border-box;
     position: fixed;
     height: 100vh;
@@ -27,7 +27,7 @@ aside img{
 aside #menu a{
     display: block;
     border-bottom: 1px solid #fff;
-    padding: 1rem;
+    padding: 1.5rem 0;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -120,32 +120,3 @@ main a:hover{
     height: 5px;
     margin:  4px auto;
 }
-/* .navbar{
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: teal !important;
-    z-index: 99;
-}
-.navbar a{
-    color: #fff !important;
-}
-.navbar .navbar-toggle{
-    border-color: #fff !important;
-}
-.navbar .icon-bar{
-    background-color: #fff !important;
-}
-@media screen and (max-width:768px){
-    aside{
-        display: none;
-    }
-    main{
-       left: 0;
-    }
-    .navbar{
-        display: inherit;
-    }
-} */
