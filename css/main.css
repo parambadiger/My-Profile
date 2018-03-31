@@ -7,6 +7,30 @@ body{
 
 
 /* -------------------------  slide bar ------------------------------------------- */
+.navbar{
+    display: none;
+    z-index: 99;
+    background-color: teal;
+    border-color: teal;
+}
+#navicon {
+    display: flex !important;
+}
+.navbar *{
+    color: #fff !important;
+}
+.navbar-toggle{
+    border-color: #fff !important;
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
+}
+.navbar img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
 aside{
     background-color: #006666;
     text-align: center;
@@ -18,6 +42,7 @@ aside{
     width: 20%;
     top: 0;
     left: 0;
+    z-index: 99;
 }
 aside img{
     width: 150px;
@@ -27,7 +52,7 @@ aside img{
 aside #menu a{
     display: block;
     border-bottom: 1px solid #fff;
-    padding: 1.5rem 0;
+    padding: 1.5rem .5rem;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -81,13 +106,15 @@ main a:hover{
     grid-template-columns: 1fr 1fr;   
     grid-row-gap: 20px;
 }
-.about div:nth-child(odd), .skill div:nth-child(odd), .academics div:nth-child(odd), .contact div:nth-child(odd), .experience div:nth-child(odd), .projects div:nth-child(odd){
+.about div:nth-child(odd), .skill div:nth-child(odd), .academics div:nth-child(odd), 
+.contact div:nth-child(odd), .experience div:nth-child(odd), .projects div:nth-child(odd){
     border-right: 1px solid #000;
     text-align: justify;
     direction:rtl;
     padding-right: 2rem;
 }
-.about div:nth-child(even), .skill div:nth-child(even), .academics div:nth-child(odd), .contact div:nth-child(even), .experience div:nth-child(even), .projects div:nth-child(even){
+.about div:nth-child(even), .skill div:nth-child(even), .academics div:nth-child(even), 
+.contact div:nth-child(even), .experience div:nth-child(even), .projects div:nth-child(even){
     border-left: 1px solid #000;
     padding-left: 2rem;
     text-align: justify;
@@ -119,4 +146,39 @@ main a:hover{
     width: 1.5rem;
     height: 5px;
     margin:  4px auto;
+}
+
+@media screen and (max-width: 992px){
+    aside{
+        display: none;
+    }
+    .navbar{
+        display: block;
+    }
+    main{
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        height: 100vh;
+        background-color: #ddd;
+        overflow: auto;
+    }
+    .about, .contact, .skill, .experience, .academics, .projects{
+        grid-template-columns: 1fr;   
+    }
+    main #icons{
+        display: none;
+    }
+    .about div:nth-child(odd), .skill div:nth-child(odd), .academics div:nth-child(odd), 
+    .contact div:nth-child(odd), .experience div:nth-child(odd), .projects div:nth-child(odd),
+    .about div:nth-child(even), .skill div:nth-child(even), .academics div:nth-child(even), 
+    .contact div:nth-child(even), .experience div:nth-child(even), .projects div:nth-child(even){
+        border: 1px solid #ddd;
+        direction:ltr;
+        padding:  0 1rem;
+    }
+    h2{
+        font-size: 21px;
+    }
 }
