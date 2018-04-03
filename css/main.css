@@ -3,39 +3,72 @@ body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     background-color: #ddd;
+    transition: all .1s ease;
 }
-
-
-/* -------------------------  slide bar ------------------------------------------- */
-.navbar{
-    display: none;
-    z-index: 99;
+header {
+    position: fixed;
+    top: 0;
     background-color: teal;
-    border-color: teal;
+    width: 100%;
+    height: 39px;
+    padding: 0 10px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
 }
-#navicon {
-    display: flex !important;
+header h5{
+    margin: 0;
+    font-size: 20px;
 }
-.navbar *{
-    color: #fff !important;
-}
-.navbar-toggle{
-    border-color: #fff !important;
-}
-.navbar-brand{
+header #open, #close,  #title{
+    color: #fff;
     display: flex;
     align-items: center;
 }
-.navbar img{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+header #open{
+    display: none;
 }
+header #open.active{
+    display: inherit;
+}
+header #close{
+    display: none;
+}
+header #close.active{
+    display: inherit;
+}
+header img{
+    width:30px;
+    height:30px;
+    border-radius: 15px;
+    margin-right: 1rem;
+}
+footer{
+    width: 100%;
+    height: 40px;
+    background-color: teal;
+    padding: 5px;
+    display: none;
+}
+footer #aside_icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer #aside_icon a{
+    color: #fff;
+}
+footer #aside_icon a:hover{
+    transform: scale(1.1);
+    color: #0099e6;
+}
+/* -------------------------  slide bar ------------------------------------------- */
 aside{
     background-color: #006666;
     text-align: center;
     color: #fff;
-    padding: 1.5rem 3rem;
+    padding: 2rem;
     box-sizing: border-box;
     position: fixed;
     height: 100vh;
@@ -48,17 +81,23 @@ aside img{
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    border: 2px solid #fff;
+    margin: auto;
 }
 aside #menu a{
     display: block;
     border-bottom: 1px solid #fff;
-    padding: 1.5rem .5rem;
+    padding: 1.5rem;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     transition: all .25s linear;
 }
 aside #menu a:hover{
+    background-color: #fff;
+    color: #333;
+}
+aside #menu a.active{
     background-color: #fff;
     color: #333;
 }
@@ -69,10 +108,10 @@ aside #aside_icon{
 }
 aside #aside_icon a{
     color: #fff;
-    transition: all .25s linear;
 }
 aside #aside_icon a:hover{
-    transform: translateY(-5px);
+    transform: scale(1.1);
+    color: #0099e6;
 }
 /* ---------------------------- main ------------------------------------------------------ */
 main{
@@ -90,8 +129,8 @@ main #icons{
     align-items: center;
 }
 main #icons img{
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
 }
 main a{
     text-decoration: none;
@@ -101,84 +140,91 @@ main a:hover{
     text-decoration: none;
     color: #0099e6;
 }
-.about, .contact, .skill, .experience, .academics, .projects{
+.section{
+    background-color: #fcfcfc;
+    padding: 2.5rem 1rem;
+    margin: 1rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    top: 40px;
+}
+.section:nth-last-child(1){
+    margin-bottom: 50px;
+}
+.section_content{
     display: grid;
     grid-template-columns: 1fr 1fr;   
     grid-row-gap: 20px;
 }
-.about div:nth-child(odd), .skill div:nth-child(odd), .academics div:nth-child(odd), 
-.contact div:nth-child(odd), .experience div:nth-child(odd), .projects div:nth-child(odd){
+.section_content div:nth-child(odd) {
     border-right: 1px solid #000;
     text-align: justify;
     direction:rtl;
     padding-right: 2rem;
 }
-.about div:nth-child(even), .skill div:nth-child(even), .academics div:nth-child(even), 
-.contact div:nth-child(even), .experience div:nth-child(even), .projects div:nth-child(even){
+.section_content div:nth-child(even){
     border-left: 1px solid #000;
     padding-left: 2rem;
     text-align: justify;
     direction: ltr;
 }
-#about td, th{
-    padding-bottom: 10px;
-}
-#about, #contact, #academics, #skill, #experience, #projects{
-    background-color: #fcfcfc;
-    padding: 1rem;
-    margin: 1rem;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    min-height: 100vh;
-}
-
-#menu-btn{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 2rem;
-    height: 2rem;
-    background-color: #000;
+#contact .section_content i{
     display: none;
-    z-index: 99;
 }
-#menu-btn p{
-    background-color: #fff;
-    width: 1.5rem;
-    height: 5px;
-    margin:  4px auto;
+hr {
+    margin: 5px;
 }
-
-@media screen and (max-width: 992px){
+h3, h4, h5{
+    font-weight: bolder;
+}
+@media screen and (max-width:768px){
+    header{
+        display: flex;
+    }
     aside{
+        width: 100%;
+        height: auto;
+        transform: translateY(-100%);
+        transform-origin: top;
+        transition: all .5s linear;
+        top: 39px;
+    }
+    aside #menu a{
+        border-bottom-style: none;
+        padding: 1rem;
+    }
+    aside.active{
+        width: 100%;
+        height: auto;
+        transform: translateY(0);
+    }
+    aside figure, aside #aside_icon{
         display: none;
     }
-    .navbar{
-        display: block;
-    }
     main{
-        position: relative;
-        top: auto;
-        right: auto;
-        left: auto;
-        height: 100vh;
-        background-color: #ddd;
-        overflow: auto;
+        top: 40px;
+        left: 0;
+        overflow: unset;
     }
-    .about, .contact, .skill, .experience, .academics, .projects{
+    main .section_content{
+        display: grid;
         grid-template-columns: 1fr;   
+        grid-row-gap: 20px;
+    }
+    .section_content div {
+        border: 1px solid #ddd !important;
+        direction:ltr !important;
+        padding: 1rem !important;
     }
     main #icons{
         display: none;
     }
-    .about div:nth-child(odd), .skill div:nth-child(odd), .academics div:nth-child(odd), 
-    .contact div:nth-child(odd), .experience div:nth-child(odd), .projects div:nth-child(odd),
-    .about div:nth-child(even), .skill div:nth-child(even), .academics div:nth-child(even), 
-    .contact div:nth-child(even), .experience div:nth-child(even), .projects div:nth-child(even){
-        border: 1px solid #ddd;
-        direction:ltr;
-        padding:  0 1rem;
+    #contact .section_content i{
+        display: inherit;
     }
-    h2{
-        font-size: 21px;
+    h3{
+        font-size:21px;
+    }
+    footer{
+        display: block;
     }
 }

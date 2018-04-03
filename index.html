@@ -2,55 +2,31 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>About Me</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MY PROFILE</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/main.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>                        
-                </button>
-                <a class="navbar-brand" href="img/dp.jpg" target="_blank"><img src="img/dp.jpg"> &nbsp;&nbsp;PARAMANAND</a>
-              </div>
-              <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skill">Skills</a></li>
-                    <li><a href="#academics">Academics</a></li>
-                    <li><a href="#projects">Academics Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right" id="navicon">
-                    <li><a href="https://www.instagram.com/badigerparamesh/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
-                    <li><a href="https://twitter.com/paramanandbadig?s=09" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/paramanand-badiger-567020139" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
-                    <li><a href="https://plus.google.com/109183252985709522178" target="_blank"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+        <header>
+            <div id="title"><a href="img/dp.jpg" target="_blank"target="_blank"><img src="img/dp.jpg"></a><h5>MR. PARAMANAND</h5></div>
+            <div id="open" class="active"><i class="fa fa-bars fa-2x"></i></div>
+            <div id="close"><i class="fa fa-times fa-2x"></i></div>
+        </header>
         <aside>
             <figure>
-                <a href="img/dp.jpg" target="_blank"><img src="img/dp.jpg"></a>
-                <figcaption><h4>MR.PARAMANAND</h4></figcaption>
+                <a href="img/dp.jpg" target="_blank"><img src="img/dp.jpg" class="img-responsive"></a>
+                <figcaption><h4>MR. PARAMANAND</h4></figcaption>
             </figure>
-            <div id="menu">
+            <div id="menu" >
                 <a href="#about">About Me</a>
                 <a href="#skill">Skills</a>
                 <a href="#academics">Academics</a>
-                <a href="#projects">Academics Projects</a>
+                <a href="#projects">Academic Projects</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact Me</a>
             </div>
@@ -61,18 +37,16 @@
                 <a href="https://plus.google.com/109183252985709522178" target="_blank"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
             </div>
         </aside>
-
         <main> 
-            <div id="about" class="active">
-                <center><h2>ABOUT ME</h2></center>
-                <div class="about">
+            <div class="section" id="about">
+                <center><h3>ABOUT ME</h3></center>
+                <div class="section_content">
                     <div id="summary">
-                        <h4>SUMMARY</h4><hr>
-                        <table>
-                            <tr><td>Understanding of industry trends and content management systems</td></tr>
-                            <tr><td>Ability to improvise, grasp new skills and solve problems</td></tr>
-                            <tr><td>Capability to work and flourish in fast-paced environment</td></tr>
-                        </table>
+                        <h5>SUMMARY</h5>
+                        <hr>
+                        <p>Understanding of industry trends and content management systems</p>
+                        <p>Ability to improvise, grasp new skills and solve problems</p>
+                        <p>Capability to work and flourish in fast-paced environment</p>
                     </div>
                     <div id="icons">
                         <img src="img/summary.svg">
@@ -81,23 +55,27 @@
                         <img src="img/user.svg">
                     </div>
                     <div id="personal">
-                        <h4>PERSONAL INFORMATION</h4><hr>
-                        <table>
-                            <tr> <th>Full Name</th><td>Paramanand C Badiger</td></tr>
-                            <tr><th>Date of Birth</th><td>12th Mar 1996</td></tr>
-                            <tr><th>Gender</th><td>Male</td></tr>
-                            <tr><th>Marital Status</th><td>Single</td></tr>
-                            <tr><th>Languages Known</th><td>Kannada and English</td></tr>
-                        </table>
+                        <h5>PERSONAL INFORMATION</h5>
+                        <hr>
+                        <b>Full Name</b>
+                        <p>Paramanand C Badiger</p>
+                        <b>Date of Birth</b>
+                        <p>12th Mar 1996</p>
+                        <b>Gender</b>
+                        <p>Male</p>
+                        <b>Marital Status</b>
+                        <p>Single</p>
+                        <b>Languages Known</b>
+                        <p>Kannada and English</p>
                     </div>
                 </div>
             </div>
-            
-            <div id="skill">
-                <center><h2>TECHNICAL SKILLS</h2><center>
-                <div class="skill">
+            <div class="section" id="skill">
+                <center><h3>TECHNICAL SKILLS</h3><center>
+                <div class="section_content">
                     <div>
-                        <h4>FRONT-END SKILLS</h4><hr>
+                        <h5>FRONT-END SKILLS</h5>
+                        <hr>
                         <p>HTML | CSS3 | JavaScript | JQuery</p>
                     </div>
                     <div id="icons">
@@ -107,11 +85,13 @@
                         <img src="img/back.svg">
                     </div>
                     <div>
-                        <h4>BACK-END SKILLS</h4><hr>
+                        <h5>BACK-END SKILLS</h5>
+                        <hr>
                         <p>PHP | MySQL</p>
                     </div>
                     <div>
-                        <h4>FRAMEWORKS</h4><hr>
+                        <h5>FRAMEWORKS</h5>
+                        <hr>
                         <p>Bootstrap | WordPress</p>
                     </div>
                     <div id="icons">
@@ -121,17 +101,18 @@
                         <img src="img/dev-tool.svg">
                     </div>
                     <div>
-                        <h4>DEVELOPMENT TOOLS</h4><hr>
+                        <h5>DEVELOPMENT TOOLS</h5>
+                        <hr>
                         <p>Git | Sublime | Visual Studio Code | WAMP | Photoshop</p>
                     </div>
                 </div>
             </div>
-            
-            <div id="academics">
-                <center><h2>ACADEMICS</h2><center>
-                <div class="skill">
+            <div class="section" id="academics">
+                <center><h3>ACADEMICS</h3><center>
+                <div class="section_content">
                     <div>
-                        <h4>GRADUATION</h4><hr>
+                        <h5>GRADUATION</h5>
+                        <hr>
                         <p>B.Sc(Computer Science)</p>
                         <p>Karnataka Science College, Dharwad</p>
                         <p>[ 2014 - 2017 ]</p>
@@ -143,12 +124,14 @@
                         <img src="img/college.svg">
                     </div>
                     <div>
-                        <h4>PUC</h4><hr>
+                        <h5>PUC</h5>
+                        <hr>
                         <p>S G T Pre University College, Katkol</p>
                         <p>[ 2012 - 2014 ]</p>
                     </div>
                     <div>
-                        <h4>SSLC</h4><hr>
+                        <h5>SSLC</h5>
+                        <hr>
                         <p>V D S Government School, K Chandargi</p>
                         <p>[ 2012 ]</p>
                     </div>
@@ -159,23 +142,23 @@
                         <img src="img/course.svg">
                     </div>
                     <div>
-                        <h4>Online Courses</h4><hr>
+                        <h5>Online Courses</h5>
+                        <hr>
                         <p>www.codeschool.com</p>
                         <p>Report <a href="https://www.codeschool.com/users/Paramu" target="_blank"> www.codeschool.com/users/Paramu</a></p>
                     </div>
                 </div>
             </div>
-            
-            <div id="projects">
-                <center><h2>ACADEMIC PROJECTS</h2></center>
-                <div class="projects">
+            <div class="section" id="projects">
+                <center><h3>ACADEMIC PROJECTS</h3></center>
+                <div class="section_content">
                     <div>
-                        <h4>PROJECT DETAILS</h4><hr>
+                        <h5>PROJECT DETAILS</h5>
+                        <hr>
                         <b>Project Title</b>
                         <p>Army Welfare Department</p>
                         <b>Technologies Used</b>
-                        <p>HTML | CSS |  JavaScript | JQuery | Bootstrap</p>
-                        <p>PHP | MySQL | WAMP</p>
+                        <p>HTML | CSS |  JavaScript | JQuery | Bootstrap | PHP | MySQL | WAMP</p>
                         <b>Operating System</b>
                         <p>Windows 10</p>
                         <b>Team Size</b>
@@ -184,7 +167,8 @@
                         <p>Three Months</p>
                     </div>
                     <div>
-                        <h4>PROJECT DESCRIPTION</h4><hr>
+                        <h5>PROJECT DESCRIPTION</h5>
+                        <hr>
                         <b>Description</b>
                         <p>This project aimed at developing a web application for the Army Welfare Department. This web application that can be accessed throughout the Army Welfare Department with proper login provided. This system used for post the jobs for x-army persons and maintaining the details of the army persons</p>
                         <b>Github</b>
@@ -192,12 +176,12 @@
                     </div>
                 </div>
             </div>
-            
-            <div id="experience">
-                <center><h2>OPEN SOURCE PROJECTS [ AUG-2017 TO MAR-2018 ]</h2></center>
-                <div class="experience">
+            <div class="section" id="experience">
+                <center><h3>OPEN SOURCE PROJECTS [ AUG-2017 TO MAR-2018 ]</h3></center>
+                <div class="section_content">
                     <div>
-                        <h4>ONLINE RESUME SERVICE</h4><hr>
+                        <h5>ONLINE RESUME SERVICE</h5>
+                        <hr>
                         <b>Wbsite</b>
                         <p><a href="http://onlineresumeservice.somee.com/" target="_blank">www.onlineresumeservice.somee.com</a></p>
                         <b>Github</b>
@@ -208,16 +192,18 @@
                     <div></div>
                 </div>
             </div>
-            
-            <div id="contact">
-                <center><h2>CONTACT ME</h2></center>
-                <div class="contact">
+            <div class="section" id="contact">
+                <center><h3>CONTACT ME</h3></center>
+                <div class="section_content">
                     <div id="place">
-                        <h4>ADDRESS</h4><hr>
+                        <h5>ADDRESS</h5>
+                        <hr>
                         <b>Current</b>
-                        <p><a href="https://www.google.co.in/maps/place/Bengaluru,+Karnataka/@12.6357251,77.1700442,9.15z/data=!4m5!3m4!1s0x3bae1670c9b44e6d:0xf8dfc3e8517e4fe0!8m2!3d12.9715987!4d77.5945627" target="_blank">Bengaluru, India - 560102</a></p>
+                        <p><a href="https://www.google.co.in/maps/place/Bengaluru,+Karnataka/@12.6357251,77.1700442,9.15z/data=!4m5!3m4!1s0x3bae1670c9b44e6d:0xf8dfc3e8517e4fe0!8m2!3d12.9715987!4d77.5945627" target="_blank">
+                            <i class="fa fa-map-marker" aria-hidden="true">&nbsp;&nbsp;</i>Bengaluru, India - 560102</a></p>
                         <b>Permanent</b>
-                        <p><a href="https://www.google.co.in/maps/place/K+Chandargi+Bus+Stop/@16.042184,75.1393068,17z/data=!3m1!4b1!4m5!3m4!1s0x3bc75791cac81dc9:0xd5f5bf4721ad051!8m2!3d16.042184!4d75.1414955" target="_blank">K Chandargi, Karnataka, India - 591114</a></p>
+                        <p><a href="https://www.google.co.in/maps/place/K+Chandargi+Bus+Stop/@16.042184,75.1393068,17z/data=!3m1!4b1!4m5!3m4!1s0x3bc75791cac81dc9:0xd5f5bf4721ad051!8m2!3d16.042184!4d75.1414955" target="_blank">
+                            <i class="fa fa-map-marker" aria-hidden="true">&nbsp;&nbsp;</i>K Chandargi, Karnataka, India - 591114</a></p>
                     </div>
                     <div id="icons">
                         <img src="img/place.svg">
@@ -226,15 +212,17 @@
                         <img src="img/contact.svg">
                     </div>
                     <div id="phone">
-                        <h4>CONTACT NO.</h4><hr>
+                        <h5>CONTACT NO.</h5>
+                        <hr>
                         <b>Mobile</b>
-                        <p><a href="tel:+918792631798">+918792631798</a></p>
-                        <p><a href="tel:+919113952739">+919113952739</a></p>
+                        <p><a href="tel:+918792631798"><i class="fa fa-phone" aria-hidden="true">&nbsp;&nbsp;</i>+918792631798</a></p>
+                        <p><a href="tel:+919113952739"><i class="fa fa-phone" aria-hidden="true">&nbsp;&nbsp;</i>+919113952739</a></p>
                     </div>
                     <div id="email">
-                        <h4>EMAIL</h4><hr>
+                        <h5>EMAIL</h5>
+                        <hr>
                         <b>Gmail</b>
-                        <p><a href="mailto:parameshbadiger245@gmail.com" target="_blank">parameshbadiger245@gmail.com</a></p>
+                        <p><a href="mailto:parameshbadiger245@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true">&nbsp;&nbsp;</i>parameshbadiger245@gmail.com</a></p>
                     </div>
                     <div id="icons">
                         <img src="img/email.svg">
@@ -243,18 +231,27 @@
                         <img src="img/follow.svg">
                     </div>
                     <div id="social">
-                        <h4>FOLLOW</h4><hr>
+                        <h5>FOLLOW</h5>
+                        <hr>
                         <b>Follow me on</b>
                         <p>
                             <a href="https://www.instagram.com/badigerparamesh/" target="_blank">Inastagram</a> | 
                             <a href="https://twitter.com/paramanandbadig?s=09" target="_blank">Twitter</a> | 
                             <a href="https://www.linkedin.com/in/paramanand-badiger-567020139" target="_blank">Linkedin</a> | 
-                            <a href="https://plus.google.com/109183252985709522178" target="_blank">Google Plus</a>
+                            <a href="https://plus.google.com/109183252985709522178" target="_blank">Google +</a>
                         </p>
                     </div>
                 </div>
-            </div>           
+            </div>    
+            <footer>
+                    <div id="aside_icon">
+                        <a href="https://www.instagram.com/badigerparamesh/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/paramanandbadig?s=09" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/paramanand-badiger-567020139" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://plus.google.com/109183252985709522178" target="_blank"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </footer>       
         </main>
-        
+        <script src="js/main.js"></script>
     </body>
 </html>
